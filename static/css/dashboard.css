@@ -1,0 +1,48 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+.container{
+
+    width:70%;
+    margin:40px auto;
+
+}
+
+h1{
+
+    color:#0f766e;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:20px;
+
+    margin:20px 0;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+}
+
+ul{
+
+    padding-left:20px;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:#0f766e;
+
+    font-weight:bold;
+
+}

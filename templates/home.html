@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <title>
+        Exponentia Academy | Home
+    </title>
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <header>
+
+        <h1> Exponentia Academy </h1>
+        <h2> Grow beyond limits!</h2>
+
+        <p>
+            Join thousands of students who are transforming
+            their future through quality education and
+            expert mentorship.
+        </p>
+        <!--<a href="{% url 'admission' %}" class="btn">
+            Enroll Now
+         </a>
+
+        <a href="{% url 'courses' %}" class="btn">
+            Explore Courses
+        </a> -->
+        <div class="button-group">
+            <a href="{% url 'admission' %}" class="btn">Enroll Now</a>
+            <a href="{% url 'courses' %}" class="btn">Explore Courses</a>
+       </div>
+
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Study material</a>
+        <a href="/accounts/login/">Login</a>
+        <a href="/signup/">Signup</a>
+    </nav>
+    <main>
+        <!---<section>
+            <h2>Courses</h2>
+            <video src="home.html - Apnikaksha - Visual Studio Code 2026-05-17 09-51-18.mp4" width="33%"
+                controls></video>
+            <video src="home.html - Apnikaksha - Visual Studio Code 2026-05-17 09-51-18.mp4" width="33%"
+                controls></video>
+            <video src="home.html - Apnikaksha - Visual Studio Code 2026-05-17 09-51-18.mp4" width="33%"></video>
+            <br>
+            <br>
+            <br>
+            <video src="home.html - Apnikaksha - Visual Studio Code 2026-05-17 09-51-18.mp4" width="33%"
+                controls></video>
+            <video src="home.html - Apnikaksha - Visual Studio Code 2026-05-17 09-51-18.mp4" width="33%"
+                controls></video>
+            <video src="home.html - Apnikaksha - Visual Studio Code 2026-05-17 09-51-18.mp4" width="33%"
+                controls></video>
+        </section> -->
+        <section>
+            <h2>College Reviews</h2>
+            <iframe width="33%" height="315" src="https://www.youtube.com/embed/l1EssrLxt7E?si=ydduIfxEYdjbmduw"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="33%" height="315" src="https://www.youtube.com/embed/l1EssrLxt7E?si=ydduIfxEYdjbmduw"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="33%" height="315" src="https://www.youtube.com/embed/l1EssrLxt7E?si=ydduIfxEYdjbmduw"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <!--<section>
+            <h2> Study Material</h2>
+            <a href="assembly notes/"><img src="Screenshot (18).png" width="24%" height="64%" alt="This is pdf"
+                    target="blank"></a>
+            <a href="assembly notes/" target="blank"><img src="Screenshot (18).png" width="24%" height="64%"
+                    alt="This is pdf"></a>
+            <a target="blank" href="assembly notes/"><img src="Screenshot (18).png" width="24%" height="64%"
+                    alt="This is pdf"></a>
+            <a href="assembly notes/" target="blank"><img src="Screenshot (18).png" width="24%" height="64%"
+                    alt="This is pdf"></a>
+        </section> -->
+        <section class="why-us">
+    <h2>Why Choose Exponentia Academy?</h2>
+
+    <div class="features">
+
+        <div class="feature-card">
+            <h3>📚 Practical Learning</h3>
+            <p>Learn through real-world projects and hands-on practice.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>💻 Industry Relevant Courses</h3>
+            <p>Python, C++, Web Development, Data Analysis and more.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🎓 Expert Mentorship</h3>
+            <p>Guidance from experienced instructors throughout your learning journey.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📜 Course Certificate</h3>
+            <p>Receive a certificate after successfully completing your course.</p>
+        </div>
+
+    </div>
+</section>
+        <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions? We'd love to hear from you.</p>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <h3>Get in Touch</h3>
+
+            <p>📍 Mahad, Raigad, Maharashtra, India</p>
+            <p>📧 exponentiaacademy@gmail.com</p>
+            <p>📞 +91 8605 108285</p>
+            <p>🕒 Mon - Sat : 9:00 AM - 6:00 PM</p>
+        </div>
+
+        <form class="contact-form">
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <input type="text" placeholder="Subject">
+
+            <textarea  placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </div>
+</section>
+        <footer>
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+
+            <h3>Exponentia Academy</h3>
+
+            <p>
+                Empowering students with quality education,
+                practical skills, and industry-ready courses.
+            </p>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="/">Home</a>
+            <a href="/courses">Courses</a>
+            <a href="/admission">Enroll</a>
+            <a href="/signup">Signup</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Popular Courses</h3>
+
+            <a href="#">Python Programming</a>
+            <a href="#">C++ Programming</a>
+            <a href="#">Data Analysis</a>
+            <a href="#">Web Development</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Follow Us</h3>
+
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Exponentia Academy. All Rights Reserved.
+    </p>
+
+</footer>
+
+    </main>
+</body>
+</html>

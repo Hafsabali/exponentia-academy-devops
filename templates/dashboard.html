@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Welcome {{ user.first_name }}</h1>
+
+    <h2>Student Dashboard</h2>
+
+    <hr>
+
+    <div class="card">
+
+        <h3> Profile </h3>
+
+        <p><strong>Name:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+
+        <p><strong>Username:</strong> {{ user.username }}</p>
+
+        <p><strong>Email:</strong> {{ user.email }}</p>
+
+    </div>
+
+    <!---<div class="card">
+        <h3>📚 My Courses</h3>
+        <ul>
+            <li>Python Programming</li>
+            <li>Object Oriented Programming (C++)</li>
+            <li>Data Analytics</li>
+        </ul>
+    </div> --->
+    <div class="card">
+
+    <!--<h3> My Courses </h3>
+
+    <p>You have not enrolled in any course yet.</p>
+
+    <a href="/admission/" class="btn">
+        Enroll Now
+    </a>
+
+   </div> --->
+
+    <!---<div class="card">
+
+        <h3>Admission Status</h3>
+
+        <p>Approved ✅</p>
+
+    </div>--->
+        {% if admission %}
+        <p><strong>Enrolled Course:</strong> {{ admission.course.title }}</p>
+        {% else %}
+        <p>You have not enrolled yet.</p>
+        <a href="/admission/">Enroll Now</a>
+        {% endif %}
+    <div class="card">
+     <h3> Admission Status </h3>
+        <p>No admission request submitted.</p>
+    </div>
+    <br>
+    <a href="/">Home</a> |
+    <a href="/accounts/logout/">Logout</a>
+
+</div>
+
+</body>
+
+</html>

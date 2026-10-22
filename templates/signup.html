@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Registration</title>
+
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+<div class="login-box">
+
+<h1>Exponentia Academy</h1>
+
+<h2>Create Student Account</h2>
+{% if form.errors %}
+<div style="color:red; background:#ffe6e6; padding:10px; margin-bottom:15px;">
+    {{ form.errors }}
+</div>
+{% endif %}
+<form method="POST">
+    {% csrf_token %}
+
+    <label>First Name</label>
+    {{ form.first_name }}
+
+    <label>Last Name</label>
+    {{ form.last_name }}
+
+    <label>Username</label>
+    {{ form.username }}
+
+    <label>Email</label>
+    {{ form.email }}
+
+    <label>Password</label>
+    {{ form.password1 }}
+
+    <label>Confirm Password</label>
+    {{ form.password2 }}
+
+    <button type="submit" class="login-btn">
+        Create Account
+    </button>
+</form>
+<p>
+
+Already have an account?
+
+<a href="/accounts/login/">
+Login
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

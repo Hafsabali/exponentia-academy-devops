@@ -1,0 +1,286 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exponentia Academy | Admission Form</title>
+
+    <link rel="stylesheet" href="{% static 'css/admission.css' %}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <img src="{% static 'images/logo.jpeg' %}" class="logo">
+
+        <h1>EXPONENTIA ACADEMY</h1>
+
+        <p>Grow Beyond Limits!</p>
+
+        <h3>Student Enrollment Form</h3>
+
+        <h4>Python | DevOps | Data Analytics | C++ (OOP)</h4>
+
+    </div>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <!-- Course Information -->
+
+        <div class="section">
+
+            <h2>Course Information</h2>
+
+            <label>Select Course</label>
+
+            <select name="course" required>
+                <option value="">Choose a course</option>
+                {% for course in courses %}
+                <option value="{{course.id}}">{{course.title}}</option>
+
+                {% endfor %}
+
+            </select>
+
+            <label>Batch</label>
+
+            <select name="batch">
+
+                <option>Morning</option>
+
+                <option>Afternoon</option>
+
+                <option>Evening</option>
+
+                <option>Weekend</option>
+
+            </select>
+
+            <label>Learning Mode</label>
+
+            <div class="radio-group">
+
+                <label>
+                    <input type="radio" name="mode" value="Online">
+                    Online
+                </label>
+
+                <label>
+                    <input type="radio" name="mode" value="Offline">
+                    Offline
+                </label>
+
+            </div>
+
+        </div>
+
+        <!-- Student Details -->
+
+        <div class="section">
+
+            <h2>Student Information</h2>
+
+            <label>Full Name</label>
+
+            <input type="text" name="student_name" required>
+
+            <label>Email</label>
+
+            <input type="email" name="email" required>
+
+            <label>Mobile Number</label>
+
+            <input type="text" name="phone" required>
+
+            <label>Date of Birth</label>
+
+            <input type="date" name="dob">
+
+            <label>Gender</label>
+
+            <div class="radio-group">
+
+                <label>
+                    <input type="radio" name="gender" value="Male">
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="Female">
+                    Female
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="Other">
+                    Other
+                </label>
+
+            </div>
+
+            <label>Highest Qualification</label>
+
+            <input type="text" name="qualification">
+
+            <label>College / University</label>
+
+            <input type="text" name="college">
+
+        </div>
+
+        <!-- Address -->
+
+        <div class="section">
+
+            <h2>Address</h2>
+
+            <textarea name="address" rows="4"></textarea>
+
+            <label>City</label>
+
+            <input type="text" name="city">
+
+            <label>State</label>
+
+            <input type="text" name="state">
+
+            <label>Pincode</label>
+
+            <input type="text" name="pincode">
+
+        </div>
+
+        <!-- Emergency Contact -->
+
+        <div class="section">
+
+            <h2>Emergency Contact</h2>
+
+            <label>Parent / Guardian Name</label>
+
+            <input type="text" name="guardian_name">
+
+            <label>Relationship</label>
+
+            <input type="text" name="relationship">
+
+            <label>Mobile Number</label>
+
+            <input type="text" name="guardian_phone">
+
+        </div>
+
+        <!-- Student Status -->
+
+        <div class="section">
+
+            <h2>Student Status</h2>
+
+            <div class="radio-group">
+
+                <label>
+                    <input type="radio" name="status" value="Student">
+                    Student
+                </label>
+
+                <label>
+                    <input type="radio" name="status" value="Fresher">
+                    Fresher
+                </label>
+
+                <label>
+                    <input type="radio" name="status" value="Working Professional">
+                    Working Professional
+                </label>
+
+            </div>
+
+        </div>
+
+        <!-- Programming Knowledge -->
+
+        <div class="section">
+
+            <h2>Programming Knowledge</h2>
+
+            <div class="radio-group">
+
+                <label>
+                    <input type="radio" name="programming" value="Yes">
+                    Yes
+                </label>
+
+                <label>
+                    <input type="radio" name="programming" value="No">
+                    No
+                </label>
+
+            </div>
+
+        </div>
+
+        <!-- Motivation -->
+
+        <div class="section">
+
+            <h2>Why do you want to join Exponentia Academy?</h2>
+
+            <textarea name="reason" rows="5"></textarea>
+
+        </div>
+
+        <!-- Documents -->
+
+        <div class="section">
+
+            <h2>Documents</h2>
+
+            <label>Upload Photo</label>
+
+            <input type="file" name="photo">
+
+            <label>Upload Resume (Optional)</label>
+
+            <input type="file" name="resume">
+
+            <label>Upload Degree Certificate (Optional)</label>
+
+            <input type="file" name="certificate">
+
+        </div>
+
+        <!-- Declaration -->
+
+        <div class="section">
+
+            <label>
+
+                <input type="checkbox" required>
+
+                I declare that all the information provided above is true and correct.
+
+            </label>
+
+        </div>
+
+        <button type="submit">
+
+            Submit Admission
+
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>

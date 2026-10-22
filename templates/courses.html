@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Explore Courses | Exponentia Academy</title>
+
+    <link rel="stylesheet" href="{% static 'css/courses.css' %}">
+</head>
+
+<body>
+
+<header>
+    <h1>Explore Our Courses</h1>
+    <p>Learn industry-ready skills with expert guidance.</p>
+</header>
+
+<div class="container">
+
+    <div class="course-card">
+        <img src="{% static 'images/python.jpg' %}" alt="Python">
+        <h2>Python Programming</h2>
+        <p>Master Python from beginner to advanced with real-world projects.</p>
+
+        <ul>
+            <li>Duration: 8 Weeks</li>
+            <li>Level: Beginner</li>
+            <li>Projects: 10+</li>
+        </ul>
+
+        <a href="{% url 'admission' %}" class="btn">Enroll Now</a>
+    </div>
+
+    <div class="course-card">
+        <img src="{% static 'images/oops.jpg' %}" alt="OOP">
+        <h2>Object Oriented Programming</h2>
+        <p>Understand Classes, Objects, Inheritance, Polymorphism and more.</p>
+
+        <ul>
+            <li>Duration: 4 Weeks</li>
+            <li>Level: Intermediate</li>
+            <li>Projects: 4+</li>
+        </ul>
+
+        <a href="{% url 'admission' %}" class="btn">Enroll Now</a>
+    </div>
+
+    <div class="course-card">
+        <img src="{% static 'images/cpp.jpg' %}" alt="C++">
+        <h2>C++ Programming</h2>
+        <p>Learn C++ for competitive programming and software development.</p>
+
+        <ul>
+            <li>Duration: 6 Weeks</li>
+            <li>Level: Beginner</li>
+            <li>Projects: 10+</li>
+        </ul>
+
+        <a href="{% url 'admission' %}" class="btn">Enroll Now</a>
+    </div>
+
+    <div class="course-card">
+        <img src="{% static 'images/data-analysis.jpg' %}" alt="Data Analysis">
+        <h2>Data Analysis</h2>
+        <p>Learn data visualization techniques.</p>
+
+        <ul>
+            <li>Duration: 4 Weeks</li>
+            <li>Level: Intermediate</li>
+            <li>Projects: 4+</li>
+        </ul>
+
+        <a href="{% url 'admission' %}" class="btn">Enroll Now</a>
+    </div>
+
+</div>
+
+</body>
+</html>

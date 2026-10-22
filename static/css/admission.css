@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: hsl(0, 21%, 88%);
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: lightgray;
+    border: 2px solid #000;
+    padding: 20px;
+}
+
+.header {
+    background: hsl(219, 12%, 54%);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    border-radius: 50%;
+
+
+}
+
+.header {
+    position: relative;
+}
+
+.header h1 {
+    font-size: 40px;
+}
+
+.header h3 {
+    margin-top: 5px;
+}
+
+.top-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.top-box input {
+    width: 180px;
+    padding: 8px;
+    margin: 5px;
+}
+
+.photo-box {
+    width: 130px;
+    height: 160px;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+
+}
+
+.section {
+    border: 2px solid #000;
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff;
+}
+
+.section h2 {
+    margin-bottom: 15px;
+    background: #ddd;
+    padding: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #555;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.checkbox-group {
+    margin-top: 10px;
+}
+
+.checkbox-group label {
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    background: #1f3a68;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #162b4d;
+}
+
+.terms {
+    margin-top: 25px;
+    background: white;
+    padding: 15px;
+    border: 2px solid #000;
+}
+
+.terms h2 {
+    margin-bottom: 10px;
+}
+
+.terms ol {
+    padding-left: 20px;
+}
+
+@media(max-width:768px) {
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+}
